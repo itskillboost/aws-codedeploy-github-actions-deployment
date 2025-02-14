@@ -3,7 +3,7 @@ name: Build and Deploy
 on: push
 
 env:
-  applicationfolder: spring-boot
+  applicationfolder: spring-boot-hello-world-example
   AWS_REGION: ap-northeast-2
   S3BUCKET: cide-codedeploy-4878
   PROJECT_NAME: cicdproject
