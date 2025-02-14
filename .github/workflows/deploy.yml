@@ -71,8 +71,7 @@ jobs:
               "sudo amazon-linux-extras enable tomcat10",
               "sudo yum install -y tomcat",
               "sudo systemctl enable tomcat",
-              "sudo systemctl start tomcat",
-              "sudo systemctl status tomcat"
+              "sudo systemctl start tomcat"
             ]' \
             --region ${{ secrets.AWS_REGION }}
     - run: |
