@@ -2,12 +2,12 @@ version: 0.0
 os: linux
 files:
   - source: /aws
-    # destination: /usr/local/codedeployresources
-    destination: /home/ec2-user/codedeployresources
+    destination: /usr/local/codedeployresources
+
 permissions:
-  - object: /home/ec2-user/codedeployresources/
-    owner: ec2-user
-    group: ec2-user
+  - object: /usr/local/codedeployresources/
+    owner: root
+    group: root
 hooks:
   ApplicationStop:
     - location: aws/scripts/application-stop.sh
@@ -20,7 +20,7 @@ hooks:
   AfterInstall:
     - location: aws/scripts/after-install.sh
       timeout: 300
-      runas: root
+      runas: tomcat
   ApplicationStart:
     - location: aws/scripts/application-start.sh
       timeout: 300
